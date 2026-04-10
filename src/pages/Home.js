@@ -1,19 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-// TODO: Replace placeholder values with actual student and lab identifiers
 const STUDENT_ID = '23WH1A0552';
 const LAB_ID = 'FSDLAB2';
 
 function Home() {
   return (
-    <div>
+    <div style={{ padding: '20px' }}>
       <h1>Stack Track Lab</h1>
-      <p>Student ID: {STUDENT_ID}</p>
-      <p>Lab ID: {LAB_ID}</p>
-
-      {/* TODO: Replace this placeholder with your question set UI */}
-      <p>QuestionComponent placeholder — implement your assigned question set here.</p>
-
+      <p><strong>Student ID:</strong> {STUDENT_ID}</p>
+      <p><strong>Lab ID:</strong> {LAB_ID}</p>
+      <hr />
+      <div style={{ marginTop: '20px' }}>
+        <h3>Task Management System</h3>
+        <p>Use the link below to view and filter tasks by status:</p>
+        <Link to="/tasks" style={{ fontSize: '18px', color: 'blue' }}>Go to Tasks Page</Link>
+      </div>
     </div>
   );
 }
